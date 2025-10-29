@@ -9936,18 +9936,17 @@ h4, h5, h6 {
     margin: 0 auto;
     padding: 20px;
 }
-.video-wrapper video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; /* mantiene proporción 16:9 */
 }
 
 .video-container h3{
-    text-align: center;
-    padding: 10px;
-    color: var(--primary);
-    font-size: 40px;
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
 }
-
-
-
