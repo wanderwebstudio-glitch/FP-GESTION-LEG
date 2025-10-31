@@ -268,7 +268,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  cursor: pointer;
 }
 
 button:not(:disabled),
@@ -3566,8 +3566,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
-}
+  margin-bottom: 0.125rem;}
 
 .custom-control-inline {
   display: inline-flex;
@@ -9879,7 +9878,10 @@ h4, h5, h6 {
   z-index: 1;
   opacity: 0;
 }
-
+.team-item {
+  border: 2px solid var(--gray);
+  margin-top: 10px;
+}
 .team-item:hover .team-social {
   opacity: 1;
 }
@@ -10080,5 +10082,84 @@ span{
 
 
   .Equipo-de-trabajo{
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
+
+  @media (min-width: 992px) {
+  body {
+    font-weight: 600 !important; /* ligeramente más grueso que normal (400) */
+    letter-spacing: 0.2px; /* opcional: un poco más de espacio entre letras */
+  }
+}
+.div-Especialista p{
+font-size: 20px;
+}
+
+.fa-whatsapp {
+  color: #25D366 ;      /* Verde típico de WhatsApp */
+  font-size: 32px;     /* Tamaño del ícono */
+  transition: transform 0.3s;
+}
+
+.fa-whatsapp:hover {
+  transform: scale(1.2);  /* Efecto hover: agrandar */
+}
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color:var(--light);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform: scale(0.8);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1);
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+}
+
+/* Header fijo arriba */
+.nav-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  transform-origin: top;
+  animation: shrink linear both;
+  animation-timeline: scroll();
+  animation-range: 0 200px;
+}
+
+/* Animación del cambio */
+@keyframes shrink {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.8);
+  }
+}
+.navbar-light{
+  background-color: var(--light);
+}
+.text-h2{
+transform: scaleX(0.6);
+}
+.Equipo-de-trabajo-team-team{
+  margin-top: -500px;
+}
+.header-contact{
+  margin-bottom:20px ;
+}
