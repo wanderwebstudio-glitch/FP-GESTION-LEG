@@ -95,3 +95,19 @@ form.addEventListener('submit', function(e) {
   const waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encoded;
   window.open(waUrl, '_blank', 'noopener,noreferrer');
 });
+
+  const btnSubir = document.getElementById("btnSubir");
+
+  // Mostrar el botón solo si hay desplazamiento
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      btnSubir.classList.add("visible");
+    } else {
+      btnSubir.classList.remove("visible");
+    }
+  });
+
+  // Subida suave al hacer clic
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
