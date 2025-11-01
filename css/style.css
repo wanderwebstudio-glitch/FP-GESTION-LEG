@@ -10338,3 +10338,8 @@ img, iframe, video {
     background-color: #444;
     transform: scale(1.1);
   }
+  .lawyers-tex{
+    font-size: 18px !important;
+    color: #fff !important;
+  }
+
